@@ -15,7 +15,8 @@ class Program{
 		for(int i = 0; i < 100; i++)
 			System.out.println(ages[i]);
 
-		for(int i = 0; i <= 120; i++) 
-			System.out.println("Age " + i + " =" + a[i]);
+		for(int i = 0; i <= 120; i++) {
+			if (a[i] != 0) System.out.println("Age " + i + " =" + a[i]);
+		}
 	}
 }

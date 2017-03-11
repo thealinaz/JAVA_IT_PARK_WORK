@@ -23,7 +23,7 @@ class Program {
             }
         }
 		
-		if (flag) System.out.println('Position: ' + m);
+		if (flag) System.out.println("Position: " + m);
         else System.out.println(-1);
 	}
 }

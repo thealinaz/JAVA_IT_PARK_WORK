@@ -18,6 +18,6 @@ public static int sum (int a, int b) {
         int y = scanner.nextInt();
         int c = sum (x, y);
 
-        System.out.println(c);
+        System.out.println("Sum of sequence: " + c);
     }
 }

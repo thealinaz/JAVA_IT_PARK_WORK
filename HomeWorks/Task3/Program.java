@@ -1,3 +1,4 @@
+//Посчитать произведение чисел, сумма цифр которых - простое число
 import java.util.Scanner;
 
 class Program {

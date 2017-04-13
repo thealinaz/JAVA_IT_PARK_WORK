@@ -1,3 +1,4 @@
+//Сумма элементов массива
 import java.util.Scanner;
 
 class Program { 

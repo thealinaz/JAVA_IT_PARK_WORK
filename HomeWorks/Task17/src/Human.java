@@ -1,6 +1,6 @@
 public class Human {
-    private String name;
-    private int age;
+    private String name = "NULL";
+    private int age = 0;
 
     public Human (String name, int age) {
         this.name = name;
@@ -11,7 +11,8 @@ public class Human {
         this.name = name;
     }
     public void setAge (int age) {
-        this.age = age;
+        if (age > 0) this.age = age;
+        else System.out.println("Error: age must be more than 0!");
     }
 
     public String getName () {

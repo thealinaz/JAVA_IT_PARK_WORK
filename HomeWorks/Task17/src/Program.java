@@ -6,7 +6,7 @@ public class Program {
         Scanner in = new Scanner(System.in);
         System.out.println("Enter number of humans: ");
         int n = in.nextInt();
-        Human human[] =  new Human[n];
+        Human[] human =  new Human[n];
         String name;
         int age;
         System.out.println("Enter names and ages of humans: ");
@@ -18,7 +18,7 @@ public class Program {
             human[i].setAge(age);
         }
 
-        human[].sortBubble; //хз как это делается(
+        //human[].sortBubble; //хз как это делается(
 
         for (int i = 0; i < human.length; i++) {
             System.out.println(human[i]);

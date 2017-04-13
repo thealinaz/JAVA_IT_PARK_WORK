@@ -6,22 +6,25 @@ public class Program {
         Scanner in = new Scanner(System.in);
         System.out.println("Enter number of humans: ");
         int n = in.nextInt();
-        Human[] human =  new Human[n];
-        String name;
-        int age;
+        Human[] humans =  new Human[n];
+
         System.out.println("Enter names and ages of humans: ");
 
-        for (int i = 0; i < human.length; i++) {
-            name = in.nextLine();
-            human[i].setName(name); //вот че ему не нравится?!!???????"?7!?!?!?!?!? =((((((((((((((99(9 бесиТтТТ
-            age = in.nextInt();
-            human[i].setAge(age);
+        for (int i = 0; i < humans.length; i++) {
+            humans[i] = new Human(in.next(), in.nextInt());   //почему-то не работал nextLine???
         }
 
-        //human[].sortBubble; //хз как это делается(
-
-        for (int i = 0; i < human.length; i++) {
-            System.out.println(human[i]);
+        for (int i = humans.length - 1 ; i >= 0; i--) {
+            for (int j = 0; j < i; j++)
+                if (humans[j].getAge() > humans[j+1].getAge()){
+                    Human temp = humans[j];
+                    humans[j] = humans[j+1];
+                    humans[j+1] = temp;
+                }
+        }
+        System.out.println("Sorted humans:");
+        for (int i = 0; i < humans.length; i++) {
+            System.out.println(humans[i]);
         }
 
     }

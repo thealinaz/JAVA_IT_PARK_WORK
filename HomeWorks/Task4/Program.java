@@ -1,3 +1,4 @@
+//Развернуть массив на месте
 import java.util.Scanner;
 
 class Program { 

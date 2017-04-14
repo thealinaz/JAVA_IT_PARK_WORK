@@ -1,3 +1,4 @@
+//Создать массив людей, сортировать пузырьком по возрасту
 import java.util.Scanner;
 
 public class Main {

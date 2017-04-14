@@ -4,7 +4,11 @@ public class Human {
 
     public Human(String name, int age) {
         this.name = name;
-        this.age = age;
+        if (age < 0) {
+            this.age = 0;
+        } else {
+            this.age = age;
+        }
     }
 
     public void setName (String name) {
@@ -13,7 +17,7 @@ public class Human {
 
     public void setAge (int age) {
         if (age < 0) {
-            System.out.println("Age must be more than 0!");
+            this.age = 0;
         } else {
             this.age = age;
         }
@@ -25,12 +29,5 @@ public class Human {
 
     public int getAge() {
         return age;
-    }
-
-    public String toString() {
-        return "Human{" +
-                "name='" + name + '\'' +
-                ", age=" + age +
-                '}';
     }
 }

@@ -1,4 +1,4 @@
-// Создать массив людей, сортировать пузырьком по возрасту
+// Вывести количество всех возрастов от 1 до 120
 import java.util.Scanner;
 
 public class Main {
@@ -22,9 +22,9 @@ public class Main {
         for(int i = 0; i < ages.length; i++) {
             if (ages[i] != 0){
                 if (ages[i] > 1) {
-                    System.out.println(ages[i] + " persons "+i + " years old.");
+                    System.out.println(ages[i] + " persons "+ i + " years old.");
                 } else {
-                    System.out.println(ages[i] + " person "+i + " years old.");
+                    System.out.println(ages[i] + " person "+ i + " years old.");
                 }
             }
         }

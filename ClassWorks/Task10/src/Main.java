@@ -16,7 +16,7 @@ public class Main {
                 new FileOutputStream("output.txt");
 
         for (int i = 0; i < figures.length; i++) {
-            String s = figures[i].toString();
+            byte[] s = figures[i].toString().getBytes();
             outputStream.write(s);
         }
     }

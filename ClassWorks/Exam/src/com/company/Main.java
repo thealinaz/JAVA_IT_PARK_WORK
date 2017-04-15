@@ -21,8 +21,8 @@ public class Main {
         Figure figures[] = {square1, square2, square3, triangle1, triangle2, triangle3, rectangle1, rectangle2};
 
 
-        for (int i = 0; i < figures.length; i++) {
-            for (int j = i; j < figures.length; j++) {
+        for (int i = figures.length ; i >= 0; i--) {
+            for (int j = i; j < figures.length - 1; j++) {
             if (figures[i].area() == figures[j].area() && figures[i].perimetr() == figures[j].perimetr() && figures[i] != null && figures[j] != null) {
                 figures[i] = null;
                 figures[j] = null;

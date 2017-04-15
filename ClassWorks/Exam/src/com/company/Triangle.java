@@ -1,7 +1,7 @@
 package com.company;
 
 
-public class Triangle implements Figure {
+public class Triangle extends Figure {
 
     private double a;
     private double b;
@@ -15,14 +15,14 @@ public class Triangle implements Figure {
 
 
     @Override
-    public double area(double a, double b, double c) {
+    public double area() {
         double p = (a + b + c) / 2;
         double s =  java.lang.Math.sqrt(p*(p-a)*(p-b)*(p-c)) ;
         return s;
     }
 
     @Override
-    public double perimetr(double a, double b, double c) {
+    public double perimetr() {
         double p = a + b + c;
         return p;
     }

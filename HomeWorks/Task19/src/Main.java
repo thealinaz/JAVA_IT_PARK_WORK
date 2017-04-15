@@ -100,8 +100,6 @@ public class Main {
     }
 
     public static void util() {
-        System.out.println("...................................");
-        System.out.println("...................................");
-        System.out.println("...................................");
+        System.out.println("                                   ");
     }
 }

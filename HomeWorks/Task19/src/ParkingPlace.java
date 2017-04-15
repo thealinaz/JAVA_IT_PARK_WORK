@@ -37,17 +37,20 @@ public class ParkingPlace {
         }
     }
 
-    public static void unpark(String s, ParkingPlace[] park) {
-        int i;
-        for (i = 0; i < park.length; i++) {
-            if (park[i].getNumber() == s) {
+
+    public static void unpark(String str, ParkingPlace[] park) {
+        boolean a = true;
+
+        for (int i = 0; i < park.length; i++) {
+            if (park[i].getNumber().equals(str)) {
                 park[i].setPlace(0);
                 park[i].setNumber(null);
                 System.out.println("This transport is unparked.");
+                a = false;
                 break;
             }
         }
-        if (i == park.length) {
+        if (a) {
             System.out.println("This transport is not exist in Parking Place");
         }
     }

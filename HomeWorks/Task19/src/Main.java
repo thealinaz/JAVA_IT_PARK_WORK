@@ -80,17 +80,18 @@ public class Main {
     }
 
     public static int menu() {
+        int n = 0;
         Scanner in = new Scanner(System.in);
         System.out.println("If you want park transport - type '1'");
         System.out.println("If you want unpark transport - type '2'");
         System.out.println("If you want to see Parking Place - type '3'");
         try {
-            int n = in.nextInt();
+            n = in.nextInt();
             return n;
         } catch (java.util.InputMismatchException e) {
             System.out.println("You must enter number 1 - 3!");
         }
-        return menu();
+        return n;
     }
 
     public static void showParkingPlace(ParkingPlace[] park) {

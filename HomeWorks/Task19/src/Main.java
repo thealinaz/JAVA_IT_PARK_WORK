@@ -12,7 +12,10 @@ getNumber()
 Мотоцикл
 Велосипед - не паркуемый объект!!!
 Перепределить equals, toString
-*/import java.util.Scanner;
+*/
+
+import java.lang.ref.SoftReference;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
@@ -48,17 +51,20 @@ public class Main {
                     }
                     try {
                         if (transport[i].parkable()) {
-                            park[i].parkByNumber(transport[i], park);
+                            ParkingPlace.parkByNumber(transport[i], park);
                             System.out.println("Transport is parked.");
                         } else {
                             System.out.println("This type of transport is not parkable.");
                         }
                     } catch (java.lang.NullPointerException e) {
+                        System.out.println("This transport is not exist in Parking Place");
                     }
                     break;
                 case 2:
                     try {
-                        park[i].unpark(transport[i], park);
+                        System.out.println("Enter number of transport:");
+                        String a = in.next();
+                        ParkingPlace.unpark(a, park);
                     } catch (java.lang.NullPointerException e) {
                         System.out.println("Parking Place is empty!");
                     }

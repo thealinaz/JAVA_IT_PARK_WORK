@@ -4,9 +4,6 @@
     <list default="true" id="e72ce3d1-49dd-4592-bf12-47f81f536df5" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Task19/Main.class" afterPath="$PROJECT_DIR$/out/production/Task19/Main.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Task19/ParkingPlace.class" afterPath="$PROJECT_DIR$/out/production/Task19/ParkingPlace.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ParkingPlace.java" afterPath="$PROJECT_DIR$/src/ParkingPlace.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -546,6 +543,14 @@
       <updated>1492178015875</updated>
       <workItem from="1492178019596" duration="20934000" />
     </task>
+    <task id="LOCAL-00001" summary="add">
+      <created>1492276204403</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1492276204403</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -599,6 +604,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add" />
+    <option name="LAST_COMMIT_MESSAGE" value="add" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

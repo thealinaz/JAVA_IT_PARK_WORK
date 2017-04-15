@@ -14,7 +14,6 @@ getNumber()
 Перепределить equals, toString
 */
 
-import java.lang.ref.SoftReference;
 import java.util.Scanner;
 
 public class Main {

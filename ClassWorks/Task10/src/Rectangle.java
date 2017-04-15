@@ -1,6 +1,6 @@
 public class Rectangle extends Figure {
-    private double a;
-    private double b;
+    protected double a;
+    protected double b;
 
     public Rectangle(String name, double a, double b) {
         super(name);

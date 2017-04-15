@@ -5,7 +5,7 @@ public class Square extends Rectangle {
         super(name, a, a);
     }
     public double getA() {
-        return a;
+        return super.getA();
     }
     public String toString() {
         return super.toString();

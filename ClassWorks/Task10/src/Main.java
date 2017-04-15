@@ -1,5 +1,6 @@
 import java.io.FileOutputStream;
-import java.io.OutputStream;
+import java.io.FileInputStream;
+import java.util.Scanner;
 
 public class Main {
 
@@ -12,12 +13,25 @@ public class Main {
         figures[3] = new Rectangle("d", 2, 9);
         figures[4] = new Square("e", 8);
 
-            OutputStream outputStream =
-                    new FileOutputStream("output.txt");
+        FileOutputStream outputStream = new FileOutputStream("output.txt");
 
         for (int i = 0; i < figures.length; i++) {
-            byte[] s = (figures[i].toString() + "\n").getBytes();
-            outputStream.write(s);
+            outputStream.write((figures[i].toString() + '\n').getBytes());
         }
+
+        FileInputStream inputStream  = new FileInputStream("output.txt");
+        for (int i = 0; i < figures.length; i++) {
+            System.out.println(readNextLine(inputStream));
+        }
+    }
+
+    public static String readNextLine(FileInputStream inputStream)throws Exception{
+        String result = "";
+        int character = inputStream.read();
+        while (character != '\n') {
+            result += (char)character;
+            character = inputStream.read();
+        }
+        return result;
     }
 }

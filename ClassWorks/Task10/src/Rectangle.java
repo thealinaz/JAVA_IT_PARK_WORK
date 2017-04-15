@@ -2,7 +2,8 @@ public class Rectangle extends Figure {
     private double a;
     private double b;
 
-    public Rectangle(double a, double b) {
+    public Rectangle(String name, double a, double b) {
+        super(name);
         this.a = a;
         this.b = b;
     }
@@ -16,6 +17,6 @@ public class Rectangle extends Figure {
     }
 
     public String toString() {
-        return (getA() + " " + getB());
+        return (super.getName() + " " + getA() + " " + getB());
     }
 }

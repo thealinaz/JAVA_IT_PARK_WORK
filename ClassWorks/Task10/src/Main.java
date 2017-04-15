@@ -11,7 +11,7 @@ public class Main {
         figures[2] = new Rectangle("c", 5, 10);
         figures[3] = new Rectangle("d", 2, 9);
         figures[4] = new Square("e", 8);
-        
+
             OutputStream outputStream =
                     new FileOutputStream("output.txt");
 

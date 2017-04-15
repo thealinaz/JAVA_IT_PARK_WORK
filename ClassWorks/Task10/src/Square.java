@@ -8,6 +8,6 @@ public class Square extends Rectangle {
         return a;
     }
     public String toString() {
-        return (super.getName() + " " + getA());
+        return super.toString();
     }
 }

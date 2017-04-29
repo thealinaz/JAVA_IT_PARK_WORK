@@ -1,4 +1,4 @@
-abstract class Transport implements ParkingObject {
+abstract public class Transport {
     private String number = null;
 
     public Transport(String number) {
@@ -6,6 +6,11 @@ abstract class Transport implements ParkingObject {
     }
 
     public String getNumber() {
+        return number;
+    }
+
+    @Override
+    public String toString() {
         return number;
     }
 }

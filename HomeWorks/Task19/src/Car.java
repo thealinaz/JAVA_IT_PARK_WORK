@@ -1,10 +1,16 @@
-public class Car extends Transport{
+public class Car extends Transport implements ParkingObject{
 
-    public Car(String number) {
+    public Car (String number) {
         super(number);
     }
 
-    public boolean parkable() {
-        return true;
+    @Override
+    public void goToThePark(Transport transport) {
+
+    }
+
+    @Override
+    public void goFromThePark(String number) {
+
     }
 }

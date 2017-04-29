@@ -1,9 +1,13 @@
 package com.company;
 
+public class Figure implements Shape{
+    @Override
+    public double area() {
+        return 0;
+    }
 
-public interface Figure {
-
-    double area();
-    double perimetr();
+    @Override
+    public double perimetr() {
+        return 0;
+    }
 }
-

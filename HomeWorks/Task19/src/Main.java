@@ -18,21 +18,20 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
+        ParkingPlace parkingPlace = new ParkingPlace();
 
         Transport porsche = new Car("E911EE");
         Transport nissan = new Car("B005AB");
         Transport honda = new Motorbike("8776AE");
         Transport shkoda = new Car("A384AA");
-        Transport specialized = new Bike("2274");
+        Transport motor = new Bike("2274");
 
-        ParkingPlace.park(porsche);
-        ParkingPlace.park(nissan);
-        ParkingPlace.park(honda);
-        ParkingPlace.park(shkoda);
-        ParkingPlace.park(specialized);
-        ParkingPlace.show();
-        ParkingPlace.unpark("E911EE");
-        ParkingPlace.unpark("A384AA");
-        ParkingPlace.show();
+        parkingPlace.park(porsche);
+        parkingPlace.park(nissan);
+        parkingPlace.park(honda);
+        parkingPlace.park(shkoda);
+        parkingPlace.park(motor);
+        parkingPlace.unpark("E911EE");
+        parkingPlace.unpark("A384AA");
     }
 }

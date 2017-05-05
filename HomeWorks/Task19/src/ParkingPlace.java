@@ -1,27 +1,28 @@
 public class ParkingPlace {
-    private static final int size = 10;
-    private static Transport transports[] = new Transport[size];
+    private final int size = 10;
+    private ParkingObject[] parkingObjects = new ParkingObject[size];
 
-    public static void park(Transport transport) {
+    public void park(Transport transport) {
         for (int i = 0; i < size; i++)
-            if (transport instanceof ParkingObject)
-                if (transports[i] == null) {
-                    transports[i] = transport;
-                    break;
+            if (parkingObjects[i] == null) {
+                try {
+                    parkingObjects[i] = (ParkingObject) transport;
+                    parkingObjects[i].goToThePark(transport);
+                } catch (ClassCastException e) {
+                    System.out.println("This type of transport can not be parked.");
                 }
+                break;
+            }
     }
 
-    public static void unpark(String number) {
-        for (int i = 0; i < size; i++)
-            if (transports[i] != null && transports[i].getNumber() == number)
-                transports[i] = null;
-    }
-
-    public static void show() {
-        for (int i = 0; i < size; i++)
-            if (transports[i] != null)
-                System.out.println(transports[i].getNumber());
-        System.out.println();
+    public void unpark(String number) {
+        for (int i = 0; i < size; i++) {
+            if (parkingObjects[i] != null && parkingObjects[i].getNumber() == number) {
+                parkingObjects[i].goFromThePark(number);
+                parkingObjects[i] = null;
+                break;
+            }
+        }
     }
 }
 

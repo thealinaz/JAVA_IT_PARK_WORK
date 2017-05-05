@@ -5,12 +5,12 @@ abstract public class Transport {
         this.number = number;
     }
 
-    public String getNumber() {
+    @Override
+    public String toString() {
         return number;
     }
 
-    @Override
-    public String toString() {
+    public String getNumber() {
         return number;
     }
 }

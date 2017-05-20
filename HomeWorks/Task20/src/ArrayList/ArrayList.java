@@ -1,5 +1,6 @@
 package ArrayList;
 
+import java.util.Arrays;
 import java.util.Iterator;
 
 public class ArrayList<T> implements Iterable<T>, List<T> {
@@ -27,8 +28,8 @@ public class ArrayList<T> implements Iterable<T>, List<T> {
             currentIndex++;
             return value;
         }
-    }
 
+    }
     public ArrayList() {
         this.elements = new Object[MAX_SIZE];
         this.count = 0;
@@ -61,8 +62,8 @@ public class ArrayList<T> implements Iterable<T>, List<T> {
 
     @Override
     public void delete(int index) {
-        elements[index] = null;
-        for (int i = count - 1; i > index; i--)
+        elements[count - 1] = null;
+        for (int i = index; i > count - 1; i++)
             elements[i] = elements[i + 1];
         count--;
     }
@@ -104,6 +105,8 @@ public class ArrayList<T> implements Iterable<T>, List<T> {
             throw new IndexOutOfBoundsException();
         }
     }
+
+
 
     @Override
     public Iterator<T> iterator() {

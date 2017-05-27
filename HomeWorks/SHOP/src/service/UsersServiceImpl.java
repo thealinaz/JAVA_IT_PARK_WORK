@@ -25,9 +25,9 @@ public class UsersServiceImpl {
         return usersDao.find(userId);
     }
 
-//???????????
     public void register(User user) {
-        System.out.println("USER ID " + usersDao.save(user));
+        usersDao.save(user);
+        System.out.println("USER ID " + user.getId() + " registered");
     }
 
     public List<User> getListOfUsers() {

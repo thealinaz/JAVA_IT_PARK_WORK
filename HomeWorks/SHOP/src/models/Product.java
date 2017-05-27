@@ -88,4 +88,23 @@ public class Product {
                 ", rating=" + rating +
                 '}';
     }
+
+    @Override
+    public boolean equals(Object object) {
+        if (this == object) {
+            return true;
+        }
+        if (object == null || !(object instanceof Product)) {
+            return false;
+        }
+
+        Product that = (Product) object;
+
+        return this.id == that.id &&
+                this.name.equals(that.name) &&
+                this.type.equals(that.type) &&
+                this.cost == that.cost &&
+                this.quantity == that.quantity &&
+                this.rating == that.rating;
+    }
 }

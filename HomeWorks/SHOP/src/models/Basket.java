@@ -42,4 +42,19 @@ public class Basket {
                 ", products=" + products +
                 '}';
     }
+
+    @Override
+    public boolean equals(Object object) {
+        if (this == object) {
+            return true;
+        }
+        if (object == null || !(object instanceof Basket)) {
+            return false;
+        }
+
+        Basket that = (Basket) object;
+
+        return this.user.equals(that.user) &&
+                this.products.equals(that.products);
+    }
 }

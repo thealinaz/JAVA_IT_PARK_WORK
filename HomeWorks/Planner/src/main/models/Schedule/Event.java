@@ -1,4 +1,4 @@
-package main.models.Schedule;
+package main.models.schedule;
 
 import java.time.Clock;
 import java.time.DayOfWeek;

@@ -1,0 +1,12 @@
+ru\itpark\dao\UsersDaoJdbcImpl$1.class
+ru\itpark\dao\UsersDaoJdbcImpl.class
+ru\itpark\generators\IdGenerator.class
+ru\itpark\dao\BaseCrudDao.class
+ru\itpark\service\UsersService.class
+ru\itpark\dao\UsersDaoFileBasedImpl.class
+ru\itpark\generators\IdGeneratorInFileImpl.class
+ru\itpark\Main.class
+ru\itpark\models\User.class
+ru\itpark\service\UsersServiceImpl.class
+ru\itpark\servlet\UsersServlet.class
+ru\itpark\dao\UsersDao.class

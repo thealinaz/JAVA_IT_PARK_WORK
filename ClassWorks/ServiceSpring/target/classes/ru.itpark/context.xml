@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/jdbc
+       http://www.springframework.org/schema/jdbc/spring-jdbc-3.0.xsd">
+
+    <beans profile="files">
+        <bean id="usersService" class="ru.itpark.service.UsersServiceImpl">
+            <constructor-arg name="usersDao" ref="usersDao"/>
+        </bean>
+
+        <bean id="usersDao" class="ru.itpark.dao.UsersDaoFileBasedImpl">
+            <constructor-arg name="idGenerator" ref="idGenerator"/>
+            <constructor-arg name="fileName" value="data\\users.txt"/>
+        </bean>
+
+        <bean id="idGenerator" class="ru.itpark.generators.IdGeneratorInFileImpl">
+            <constructor-arg name="fileName" value="data\\id.txt"/>
+        </bean>
+    </beans>
+
+    <beans profile="db">
+
+        <bean id="usersServiceDb" class="ru.itpark.service.UsersServiceImpl">
+            <constructor-arg name="usersDao" ref="usersDaoDb"/>
+        </bean>
+
+        <bean id="usersDaoDb" class="ru.itpark.dao.UsersDaoJdbcImpl">
+            <constructor-arg name="dataSource" ref="dataSource"/>
+        </bean>
+
+        <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+            <constructor-arg name="username" value="postgres"/>
+            <constructor-arg name="password" value="Zaq12wsx"/>
+            <constructor-arg name="url" value="jdbc:postgresql://localhost:5432/ZALILOVA_DB"/>
+        </bean>
+    </beans>
+
+    <beans profile="test-db">
+        <bean id="usersDaoTest" class="ru.itpark.dao.UsersDaoJdbcImpl">
+            <constructor-arg name="dataSource" ref="testDataSource"/>
+        </bean>
+
+        <jdbc:embedded-database id="testDataSource" type="H2">
+            <jdbc:script location="classpath:ru.itpark.sql/test/users_create_table.sql"/>
+            <jdbc:script location="classpath:ru.itpark.sql/test/test_data.sql"/>
+        </jdbc:embedded-database>
+    </beans>
+
+</beans>

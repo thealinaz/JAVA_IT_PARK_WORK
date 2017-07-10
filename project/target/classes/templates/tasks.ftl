@@ -139,7 +139,7 @@
 <div align="center">
     <table>
         <tr>
-            <th>Задача</th>
+            <th>Описание</th>
             <th>Время</th>
         </tr>
 
@@ -154,10 +154,10 @@
 
 <form action="/tasks/add" method="get">
     <br>
-    <input type="text" id="text" name="text" placeholder="Например: прочитать 30 страниц книги...">
+    <input type="text" id="text" name="text" placeholder="Описание расхода..">
     <br>
     <br>
-    <input type="text" id="time" name="time" placeholder="Введите время в формате чч:мм">
+    <input type="text" id="time" name="time" placeholder="Сумма..">
     <br>
     <input type="submit">
 </form>

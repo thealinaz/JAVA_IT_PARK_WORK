@@ -15,15 +15,6 @@ public class Task {
     @Column
     String text;
 
-    @Column
-    boolean done;
-
-    public Task(String time, String text, boolean done) {
-        this.time = time;
-        this.text = text;
-        this.done = done;
-    }
-
     public Task(String time, String text) {
         this.time = time;
         this.text = text;
@@ -54,13 +45,5 @@ public class Task {
 
     public void setText(String text) {
         this.text = text;
-    }
-
-    public boolean isDone() {
-        return done;
-    }
-
-    public void setDone(boolean done) {
-        this.done = done;
     }
 }

@@ -9,8 +9,8 @@
     </database>
     <schema id="3" parent="2" name="public">
       <ObjectId>2200</ObjectId>
-      <IntrospectionTimestamp>2017-07-10.06:18:16.185</IntrospectionTimestamp>
-      <IntrospectionStateNumber>609</IntrospectionStateNumber>
+      <IntrospectionTimestamp>2017-07-11.00:40:00.118</IntrospectionTimestamp>
+      <IntrospectionStateNumber>612</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -59,24 +59,17 @@
       <NotNull>1</NotNull>
       <StateNumber>608</StateNumber>
     </column>
-    <column id="14" parent="10" name="done">
-      <Position>4</Position>
-      <DataType>boolean|0</DataType>
-      <NotNull>1</NotNull>
-      <StateNumber>608</StateNumber>
-      <DefaultExpression>false</DefaultExpression>
-    </column>
-    <index id="15" parent="10" name="tasks_id_uindex">
+    <index id="14" parent="10" name="tasks_id_uindex">
       <ObjectId>65591</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="16" parent="10" name="tasks_pkey">
+    <index id="15" parent="10" name="tasks_pkey">
       <ObjectId>65589</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="17" parent="10" name="tasks_pkey">
+    <key id="16" parent="10" name="tasks_pkey">
       <ObjectId>65590</ObjectId>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>tasks_pkey</UnderlyingIndexName>

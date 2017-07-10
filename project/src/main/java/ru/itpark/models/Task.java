@@ -6,7 +6,7 @@ import javax.persistence.*;
 public class Task {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY) //че тут
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     int id;
 
     @Column

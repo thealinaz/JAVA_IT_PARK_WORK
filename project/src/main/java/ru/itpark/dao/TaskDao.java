@@ -5,5 +5,5 @@ import ru.itpark.models.Task;
 
 import java.util.List;
 
-public interface TaskDao extends JpaRepository<Task, Integer>{ //че тут
+public interface TaskDao extends JpaRepository<Task, Integer>{ //что тут произошло
 }

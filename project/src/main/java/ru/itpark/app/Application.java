@@ -1,5 +1,6 @@
 package ru.itpark.app;
 
+import org.springframework.boot.SpringApplication;
 
 public class Application {
 

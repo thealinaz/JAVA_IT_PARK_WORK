@@ -6,7 +6,7 @@
         @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100);
 
         body {
-            background-color: #3e94ec;
+            background-color: #ec93a0;
             font-family: "Roboto", helvetica, arial, sans-serif;
             font-size: 16px;
             font-weight: 400;
@@ -36,15 +36,15 @@
         /*** Table Styles **/
 
         th {
-            color: #D5DDE5;;
-            background: #1b1e24;
-            border-bottom: 4px solid #9ea7af;
-            border-right: 1px solid #343a45;
+            color: #fafafa;;
+            background: #30011e;
+            border-bottom: 4px solid #f5d6ba;
+            border-right: 1px solid #f5d6ba;
             font-size: 23px;
             font-weight: 300;
             padding: 24px;
             text-align: left;
-            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+            text-shadow: 0 1px 1px rgba(215, 252, 212, 0.1);
             vertical-align: middle;
         }
 
@@ -60,17 +60,17 @@
         tr {
             border-top: 1px solid #C1C3D1;
             border-bottom-: 1px solid #C1C3D1;
-            color: #666B85;
+            color: rgba(68, 2, 42, 0.76);
             font-size: 16px;
             font-weight: normal;
             text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
         }
 
         tr:hover td {
-            background: #4E5066;
+            background: #44022a;
             color: #FFFFFF;
-            border-top: 1px solid #22262e;
-            border-bottom: 1px solid #22262e;
+            border-top: 1px solid #44022a;
+            border-bottom: 1px solid #44022a;
         }
 
         tr:first-child {
@@ -86,7 +86,7 @@
         }
 
         tr:nth-child(odd):hover td {
-            background: #4E5066;
+            background: #4e5066;
         }
 
         tr:last-child td:first-child {
@@ -124,14 +124,15 @@
 
         input[type=submit] {
             width: 200px;
-            background-color: #666B85;
+            background-color: #6e0146;
             color: white;
             padding: 14px 20px;
             margin: 8px 0;
-            border: none;
+            border: 2px solid #ec93a0;
             border-radius: 4px;
             cursor: pointer;
         }
+
     </style>
 </head>
 <body>
@@ -139,7 +140,7 @@
 <div align="center">
     <table>
         <tr>
-            <th>Описание</th>
+            <th>Задача</th>
             <th>Время</th>
         </tr>
 
@@ -154,12 +155,16 @@
 
 <form action="/tasks/add" method="get">
     <br>
-    <input type="text" id="text" name="text" placeholder="Описание расхода..">
+    <input type="text" id="text" name="text" placeholder="Описание задачи..">
     <br>
     <br>
-    <input type="text" id="time" name="time" placeholder="Сумма..">
+    <input type="text" id="time" name="time" placeholder="Время в формате чч:мм..">
     <br>
     <input type="submit">
+</form>
+
+<form action="/tasks/delete" method="get">
+    <input type="submit" value="Очистить список">
 </form>
 
 </body>
